@@ -1,4 +1,3 @@
-// UUID生成器
 export const uuid = () => {
   const s = []
   const hexDigits = '0123456789abcdef'

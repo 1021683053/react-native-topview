@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
   }
 });
 
-// 顶层View
 class TopView extends Component{
   static defaultProps={
     elements: []
@@ -25,7 +24,6 @@ class TopView extends Component{
   }
 }
 
-// 初始化RootView
 export default class RootView{
   static topView;
   constructor(AppRegistry){
@@ -47,8 +45,6 @@ export default class RootView{
     RootView.topView = this;
   }
 
-
-  // 新增节点
   push(element){
     const key = uuid();
     this.elements.push({ element, key });
@@ -56,7 +52,6 @@ export default class RootView{
     return key;
   }
 
-  // 删除节点
   remove(id){
     let index = null;
     this.elements.some(({ key }, idx)=>{
@@ -70,13 +65,11 @@ export default class RootView{
     this._update();
   }
 
-  // 删除最后一个
   pop(){
     this.elements.pop();
     this._update();
   }
 
-  // 更新TopView
   _update(){
     this.refTopView && this.refTopView.forceUpdate();
   }
