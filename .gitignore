@@ -1,0 +1,4 @@
+node_modules/
+.temp/
+.rn_temp/
+.DS_Store
